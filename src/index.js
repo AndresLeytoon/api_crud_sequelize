@@ -3,10 +3,13 @@ import { sequelize } from "./database/sequelize";
 import "./models/prodcuts";
 import "./models/task";
 import "./models/Product";
+import "./models/User";
+import "./models/Role";
+
 
 async function main() {
   try {
-    await sequelize.sync({ force: false});  
+    await sequelize.sync({ force:false});  
     app.listen(3000);
     console.log("aerver on port", 3000);
   } catch (error) {

@@ -9,7 +9,37 @@
 			"name": "Products",
 			"item": [
 				{
-					"name": "/products",
+					"name": "/api/products",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"\",\r\n    \"price\":\"23\",\r\n    \"category\":\"la categoria es 10299.3 y los prosuctos son carro, moto\",\r\n    \"imgURL\":\"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fvaluenomad.com%2Fwp-content%2Fuploads%2F2015%2F11%2Fskylake_laptop.jpg&f=1&nofb=1\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/products",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -26,13 +56,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/products",
+							"raw": "http://localhost:3000/api/products",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
+								"api",
 								"products"
 							]
 						}
@@ -40,7 +71,7 @@
 					"response": []
 				},
 				{
-					"name": "/products/:productsId",
+					"name": "/api/products/:productsId",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -57,13 +88,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/products/15",
+							"raw": "http://localhost:3000/api/products/15",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
+								"api",
 								"products",
 								"15"
 							]
@@ -72,7 +104,7 @@
 					"response": []
 				},
 				{
-					"name": "/products/:productsId",
+					"name": "/api/products/:productsId",
 					"request": {
 						"method": "DELETE",
 						"header": [],
@@ -86,28 +118,29 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/products/4",
+							"raw": "http://localhost:3000/api/products/12",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
+								"api",
 								"products",
-								"4"
+								"12"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "/products/:productsId",
+					"name": "/api/products/:productsId",
 					"request": {
 						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\":\"luc\",\r\n    \"price \":\"andres\",\r\n    \"category\":\"andres\",\r\n    \"imgURL\":\"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fvaluenomad.com%2Fwp-content%2Fuploads%2F2015%2F11%2Fskylake_laptop.jpg&f=1&nofb=1\"\r\n}",
+							"raw": "{\r\n    \"name\":\"juan\",\r\n    \"price \":\"andres\",\r\n    \"category\":\"andres\",\r\n    \"imgURL\":\"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fvaluenomad.com%2Fwp-content%2Fuploads%2F2015%2F11%2Fskylake_laptop.jpg&f=1&nofb=1\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -115,44 +148,16 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/products/5",
+							"raw": "http://localhost:3000/api/products/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
+								"api",
 								"products",
-								"5"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "/products",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"type": "default"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"name\":\"luc\",\r\n    \"price \":\"andres\",\r\n    \"category\":\"andres\",\r\n    \"imgURL\":\"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fvaluenomad.com%2Fwp-content%2Fuploads%2F2015%2F11%2Fskylake_laptop.jpg&f=1&nofb=1\"\r\n}"
-						},
-						"url": {
-							"raw": "http://localhost:3000/products",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"products"
+								"1"
 							]
 						}
 					},

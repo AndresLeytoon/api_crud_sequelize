@@ -13,6 +13,8 @@ var _package = _interopRequireDefault(require("../../package.json"));
 
 var _products = _interopRequireDefault(require("../routes/products.routes"));
 
+var _auth = _interopRequireDefault(require("../routes/auth.routes"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var app = (0, _express["default"])();
@@ -28,6 +30,7 @@ app.get("/", function (req, res) {
     date: "08/06/2022"
   });
 });
-app.use("/products", _products["default"]);
+app.use("/api/products", _products["default"]);
+app.use("/api/auth", _auth["default"]);
 var _default = app;
 exports["default"] = _default;

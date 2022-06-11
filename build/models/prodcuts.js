@@ -18,7 +18,9 @@ var Project = _sequelize2.sequelize.define("projects", {
     autoIncrement: true
   },
   name: {
-    type: _sequelize.DataTypes.STRING
+    type: _sequelize.DataTypes.STRING,
+    allowNull: false,
+    unique: true
   },
   prioriry: {
     type: _sequelize.DataTypes.INTEGER

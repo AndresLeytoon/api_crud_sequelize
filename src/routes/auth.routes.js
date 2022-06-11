@@ -1,6 +1,8 @@
 import {Router} from 'express'
+import * as authCtrl from '../controllers/auth.controllers'
 const router= Router()
 
-router.get("/auth",(req,res)=>res.json("hola get products"))
+router.post("/singup",authCtrl.singUp)
+router.post("/singin",authCtrl.singIn)
 
 export default router;

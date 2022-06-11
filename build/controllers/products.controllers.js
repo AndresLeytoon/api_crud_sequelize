@@ -15,14 +15,6 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
-// export const createProduct = async (req, res) => {
-//     console.log(req.body)
-//     res.send("hola post")
-// //   const { name, category, price, imgURL } = req.body;
-// //   const newProduct = new Product({ name, category, price, imgURL });
-// //   const productSaved = await new Product.save();
-// //   res.status(201).json(productSaved);
-// };
 var createProduct = /*#__PURE__*/function () {
   var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(req, res) {
     var _req$body, name, category, price, imgURL, newProduct, productSaved;
@@ -229,7 +221,10 @@ var deleteProductById = /*#__PURE__*/function () {
             });
 
           case 4:
-            res.sendStatus(204);
+            res.json({
+              productId: productId,
+              message: "Product delete ok"
+            });
             _context5.next = 10;
             break;
 

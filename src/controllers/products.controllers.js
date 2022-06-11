@@ -1,13 +1,5 @@
 import { Product } from "../models/Product";
 
-// export const createProduct = async (req, res) => {
-//     console.log(req.body)
-//     res.send("hola post")
-// //   const { name, category, price, imgURL } = req.body;
-// //   const newProduct = new Product({ name, category, price, imgURL });
-// //   const productSaved = await new Product.save();
-// //   res.status(201).json(productSaved);
-// };
 
 export const createProduct = async (req, res) => {
   const { name, category, price, imgURL } = req.body;
@@ -76,7 +68,7 @@ export const deleteProductById = async (req, res) => {
         id: productId,
       },
     });
-    res.sendStatus(204);
+    res.json({productId,message:"Product delete ok"});
   } catch (error) {
     return res.status(500).json({ message: error.message });
   }
