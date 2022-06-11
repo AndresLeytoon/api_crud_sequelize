@@ -167,7 +167,62 @@
 		},
 		{
 			"name": "auth",
-			"item": []
+			"item": [
+				{
+					"name": "/api/auth/singUp",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/auth/singUp",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"singUp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/auth/singIn",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/auth/singIn",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"singIn"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		},
 		{
 			"name": "user",
